@@ -16,7 +16,18 @@
     <url-pattern>/calculatorInsset/exemple</url-pattern>
   </servlet-mapping>
 
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>pourcentageServlet</servlet-name>
+    <servlet-class>org.insset.server.CalculPourcentageServiceImpl</servlet-class>
+  </servlet>
 
+  <servlet-mapping>
+    <servlet-name>pourcentageServlet</servlet-name>
+    <url-pattern>/calculatorInsset/pourcentage</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <servlet-name>romanConvert</servlet-name>
     <servlet-class>org.insset.server.RomanConverterServiceImpl</servlet-class>

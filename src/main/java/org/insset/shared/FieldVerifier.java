@@ -52,17 +52,30 @@ public class FieldVerifier {
      * @return true if valid, false if invalid
      */
     public static boolean isValidDecimal(Integer nbr) {
-        //Implement your code
-        return true;
+        return nbr > 0 && nbr <= 2000;
+    }
+
+    public static boolean isValidDecimal2(Integer nbr) {
+        return nbr >= 0 && nbr <= 100;
+    }
+
+    public static boolean isEntier(String nbr) {
+        if (nbr.toString().matches("-?[0-9]+")) {
+            return true;
+        }
+
+        return false;
     }
 
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
-        return true;
+        if (nbr.matches("^M{0,1}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") || nbr.matches("^M{0,2}$")) {
+            return true;
+        }
+
+        return false;
     }
 
     public static boolean isValidDate(String date) {
-        //Implement your code
-        return true;
+        return date.matches("^(0[1-9]|[12][0-9]|3[01])[-/](0[1-9]|1[012])[-/](19\\d\\d|2000)$");
     }
 }
